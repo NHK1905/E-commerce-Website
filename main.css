@@ -57,7 +57,7 @@ header {
     justify-content: space-between;
     padding: 0 var(--header-padding);
     z-index: 99;
-    transition: height 0.3s ease 0s;
+    transition: height 0.3s ease 0s, background-color .3s ease 0s;
 }
 
 header.shrink {
@@ -215,4 +215,110 @@ header.shrink {
 
 .hero-btn:hover {
     transform: translateY(-10px);
+}
+
+.hero-txt {
+    position: absolute;
+    text-transform: uppercase;
+    font-family: BerlinSansFBDemiBold;
+    font-size: 9.75rem;
+    top: 203px;
+    right: -182px;
+    color: var(--second-color);
+    transform: rotate(-90deg);
+}
+
+.slide-control {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    z-index: 98;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.slide-control > li {
+    font-size: 1.75 rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: transform .3 ease 0s;
+}
+
+.slide-control > li.active {
+    transform: scale(1.5);
+    color: var(--txt-white);
+}
+
+.slide-control > li ~ li {
+    margin-left: 30px;
+}
+
+.slide-control > li:hover {
+    color: var(--txt-white);
+}
+
+.section {
+    padding: 12rem 0;
+}
+
+.section-content {
+    padding: 7rem 7rem 0;
+}
+
+.section-title {
+    font-family: BerlinSansFBDemiBold;
+    text-align: center;
+    position: relative;
+}
+
+.section-title > h3 {
+    text-transform: uppercase;
+}
+
+.second-title {
+    font-size: 5rem;
+    color: var(--second-color);
+    position: absolute;
+    bottom: 40%;
+    z-index: -1;
+}
+
+.main-title {
+    font-size: 3.5rem;
+    z-index: 1;
+}
+
+.category-img {
+    padding: 4rem;
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.category-img-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-position: bottom;
+    background-size: cover;
+    transition: transform 1s ease 0s;
+}
+
+.category-img:hover .category-img-inner {
+    transform: scale(1.3);
+}
+
+.category-title {
+    font-size: 4.5rem;
+    font-weight: 700;
+    padding: 2rem;
+    position: absolute;
+    bottom: 0;
+    color: var(--txt-white);
+    text-transform: capitalize;
 }
